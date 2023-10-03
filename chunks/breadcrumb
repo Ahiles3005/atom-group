@@ -9,11 +9,11 @@
             <meta itemprop="position" content="[[+idx]]">
         </a></li>`
         &tplCurrent=`@INLINE <li class="active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-<a href="[[+link]]" title="[[+menutitle]]" itemprop="item">
+<span itemprop="item">
 <span itemprop="name">[[+menutitle]]</span>
 <meta itemprop="position" content="[[+idx]]">
 
-</a>
+</span>
 `
         &tplWrapper=`@INLINE <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">[[+output]]</ul>`
     ]]

@@ -167,6 +167,19 @@ $(document).ready(function () {
         $('.call_modal').fadeIn(500);
     });
 
+    $('.call_modal').on('click', function (event) {
+            if(event.target.classList.contains('call_modal')){
+                $('.fa-times').click();
+            }
+    });
+
+    $('.calc-modal').on('click', function (event) {
+            if(event.target.classList.contains('calc-modal')){
+                $('.fa-times').click();
+            }
+    });
+
+
     $('.calc-modal-open').on('click', function () {
         var cat = $('#FORM1_field1').val();
         var dog = $('#FORM1_field2').val();
