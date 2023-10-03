@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <title>[[*seo-pagetitle]]</title>
+  <base href="[[!++site_url]]" />
+  <meta charset="[[++modx_charset]]" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta name="description" content="[[*description-page]]">
+  <meta name="keywords" content="[[*keywords]]">
+      <!-- OpenGraph -->
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="[[++site_url]]">
+<meta property="og:title" content="[[*seo-pagetitle]]"/>
+<meta property="og:image" content="[[++site_url]][[*image]]">
+<meta property="og:image:width" content="818">
+<meta property="og:image:height" content="361">
+<meta property="og:url" content="[[++site_url]][[*id:is=`1`:then=``:else=`[[*alias]]"`]]" />
+<meta property="og:description" content="[[*description-page]]">
+
+  <link href="/assets/templates/css/styles.css" rel="stylesheet">
+  <link href="/assets/templates/css/mob.css" rel="stylesheet">
+  <link href="/assets/templates/css/slick.css" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(90606497, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/90606497" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<div class="scroll-div"><a href="#" id="scroll_top" title="Наверх"></a></div>
+<body [[*id:is=`1`:then=`class="index"`:else=`class="[[bodyClass]]"`]]>
+  <div class="mob-menu usual-none">
+    <div class="logo-header">
+        <a class="usual-none tel-mob" href="tel:[[++tel]]"></a>
+        <a href=""><img src="/assets/templates/img/logo.svg" alt=""></a>
+        <p>Везде, всегда,<br>вовремя</p>
+        <div class="close"></div>
+    </div>
+    [[!SimpleSearchForm? &landing=`9`]]
+    <a class="lk" href=""><img src="/assets/templates/img/lk.svg">Личный кабинет</a>
+    <div class="menu">
+        [[!pdoMenu?
+            &parents=`0`
+            &level=`1`
+            &sortdir=`ASC`
+            &tplOuter=`@INLINE<ul class="main_menu">[[+wrapper]]</ul>`
+            &tplInner=`@INLINE<ul class="submenu">[[+wrapper]]</ul>`
+            &tplParentRow=`@INLINE <li class="has-dropdown" [[+attributes]]><a href="[[+link]]" class="dropbtn" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+            &tpl=`@INLINE <li [[+classes]]><a href="[[+link]]" [[+attributes]]>[[+menutitle]]</a></li>`
+            &hereClass=`selected`
+            &resources=`-1`
+        ]]
+        <a class="tel" href="tel:[[++tel]]">[[++tel]]</a>
+        <a class="mail" href="mailto:[[++mail]]">[[++mail]]</a>
+        <div class="call">Обратный звонок</div>
+    </div>
+  </div>
+  <div class="fix">
+        <div class="container">
+            <a class="usual-none tel-mob" href="tel:[[++tel]]"></a>
+            <a href=""><img src="/assets/templates/img/logo.svg" alt=""></a>
+            <nav class="menu_panel">
+                [[!pdoMenu?
+                  &parents=`0`
+                  &level=`1`
+                  &sortdir=`ASC`
+                  &tplOuter=`@INLINE<ul class="main_menu">[[+wrapper]]</ul>`
+                  &tplInner=`@INLINE<ul class="submenu">[[+wrapper]]</ul>`
+                  &tplParentRow=`@INLINE <li class="has-dropdown" [[+attributes]]><a href="[[+link]]" class="dropbtn" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+                  &hereClass=`selected arr_top`
+                  &resources=`-1`
+                ]]
+            </nav>
+           <div class="call">Обратный звонок</div>
+           <div class="usual-none mob-menu-btn"></div>
+        </div>
+    </div>
+  <header class="page-header">
+    <div class="container">
+        <div class="top-header">
+            <div class="logo-header">
+                <a class="usual-none tel-mob" href="tel:[[++tel]]"></a>
+                <span class="h-logo" itemscope itemtype="http://schema.org/Organization">
+                <a itemprop="url" href="/"></a>
+                <img itemprop="logo" src="/assets/templates/img/logo.svg" />
+                </span>
+                <p>Везде, всегда,<br>вовремя</p>
+                <div class="usual-none mob-menu-btn"></div>
+            </div>
+            <div class="menu-header">
+                <div class="search-block">
+                    <div class="width">
+                        [[!SimpleSearchForm? &landing=`9`]]
+                        <a class="tel" href="tel:[[++tel]]">[[++tel]]</a>
+                        <span>Пн-Пт 10:00-18:00</span>
+                        <a class="mail" href="mailto:[[++mail]]">[[++mail]]</a>
+                    </div>
+                    <!--<a class="lk" href="">Личный кабинет</a>-->
+                </div>
+                <div class="menu">
+                    [[!pdoMenu?
+                        &parents=`0`
+                        &level=`1`
+                        &sortdir=`ASC`
+                        &tplOuter=`@INLINE<ul class="main_menu">[[+wrapper]]</ul>`
+                        &tplInner=`@INLINE<ul class="submenu">[[+wrapper]]</ul>`
+                        &tplParentRow=`@INLINE <li class="has-dropdown" [[+attributes]]><a href="[[+link]]" class="dropbtn" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+                        &tpl=`@INLINE <li [[+classes]]><a href="[[+link]]" [[+attributes]]>[[+menutitle]]</a></li>`
+                        &hereClass=`selected`
+                        &resources=`-1`
+                    ]]
+                    <div class="call">Обратный звонок</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </header>
