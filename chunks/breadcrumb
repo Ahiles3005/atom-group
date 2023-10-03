@@ -1,0 +1,20 @@
+[[*id:is=`1`:then=``:else=`
+    [[pdoCrumbs?
+        &outputSeparator=`<li><span> | </span></li>`
+        &showHome=`1`
+        &tplHome=`breadcrumbs_tpl`
+        &tpl=`@INLINE <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="[[+link]]" title="[[+menutitle]]" itemprop="item">
+            <span itemprop="name">[[+menutitle]]</span>
+            <meta itemprop="position" content="[[+idx]]">
+        </a></li>`
+        &tplCurrent=`@INLINE <li class="active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<a href="[[+link]]" title="[[+menutitle]]" itemprop="item">
+<span itemprop="name">[[+menutitle]]</span>
+<meta itemprop="position" content="[[+idx]]">
+
+</a>
+`
+        &tplWrapper=`@INLINE <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">[[+output]]</ul>`
+    ]]
+`]]
