@@ -118,7 +118,7 @@ h2, h3, h4 {
     margin: 0 0 10px 0;
 }
 
-p, ul, ol {
+.p, ul, ol {
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -2687,3 +2687,37 @@ a.tel::before, .contacts-info > div a.tel::before {
     display: flex;
     justify-content: space-between;
 }
+
+.has-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+ul.submenu  {
+    margin: 0;
+}
+
+.submenu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.submenu []
+    /* Изменение цвета выпадающих ссылок при наведении курсора */
+.submenu a:hover {background-color: #ddd;}
+
+/* Показать выпадающее меню при наведении курсора */
+.has-dropdown:hover .submenu {display: block;}
+
+/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+.has-dropdown:hover .dropbtn {background-color: #3e8e41;}
