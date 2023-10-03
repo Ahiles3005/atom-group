@@ -410,8 +410,9 @@ input {
     color: #fff;
 }
 
-.tel {
-    pointer-events: none;
+
+a.tel::before, .contacts-info > div a.tel::before {
+    background: none !important;
 }
 
 .menu {
@@ -2428,10 +2429,6 @@ input {
 .contacts-info > div a {
     color: #000;
     position: relative;
-}
-
-.contacts-info > div a.tel {
-    pointer-events: none;
 }
 
 .contacts-info > div a::before {
